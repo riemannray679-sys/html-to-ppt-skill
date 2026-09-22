@@ -1,0 +1,14 @@
+interface:
+  display_name: HTML转PPT
+  short_description: 一键生成研究级、图像丰富且关键内容可编辑的HTML与PPTX
+  brand_color: '#12355B'
+  default_prompt: 使用 $html-to-ppt 一键生成研究级、图像丰富的自包含HTML演示稿和同版式PPTX；关键文字、数据与图表保持可编辑，不要在两个文件之间停下来确认。
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

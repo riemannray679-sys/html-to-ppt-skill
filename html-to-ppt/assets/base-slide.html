@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Presentation</title>
+  <style>
+    :root {
+      --navy: #12355B;
+      --blue: #2B6EAA;
+      --light-blue: #EAF2F8;
+      --ink: #1F2933;
+      --muted: #5E6B78;
+      --border: #C9D5E1;
+      --field: #F4F7FA;
+      --warning: #E86F25;
+      --font-sans-zh: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+      --font-serif-zh: "SimSun", "Songti SC", "Noto Serif CJK SC", serif;
+      --font-kai-zh: "STKaiti", "KaiTi", "Kaiti SC", serif;
+      --font-latin: "Times New Roman", Times, serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background: #DDE4EA;
+      color: var(--ink);
+      font-family: var(--font-sans-zh);
+    }
+
+    .deck {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+      padding: 32px;
+    }
+
+    .slide {
+      position: relative;
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      background: #FFFFFF;
+      box-shadow: 0 12px 36px rgba(18, 53, 91, 0.16);
+    }
+
+    .slide-title {
+      position: absolute;
+      left: 96px;
+      top: 54px;
+      width: 1728px;
+      height: 70px;
+      margin: 0;
+      color: var(--navy);
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.15;
+    }
+
+    .source-footer {
+      position: absolute;
+      left: 96px;
+      bottom: 28px;
+      width: 1728px;
+      min-height: 24px;
+      color: var(--muted);
+      font-family: var(--font-serif-zh);
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    .axis-rect {
+      position: absolute;
+      border: 0;
+      transform: none;
+      transform-origin: 0 0;
+    }
+
+    img[data-ppt-type="image"] {
+      display: block;
+      max-width: none;
+    }
+
+    .latin, .number { font-family: var(--font-latin); }
+    .quotation { font-family: var(--font-kai-zh); }
+    .annotation { font-family: var(--font-serif-zh); }
+
+    @media print {
+      html, body { background: #FFFFFF; }
+      .deck { gap: 0; padding: 0; }
+      .slide {
+        box-shadow: none;
+        break-after: page;
+        page-break-after: always;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="deck" aria-label="Presentation">
+    <section class="slide" data-slide-id="slide-01" aria-label="Slide 1">
+      <h1
+        class="slide-title"
+        data-ppt-type="text"
+        data-ppt-id="slide-01-title"
+        data-editable="true"
+        data-layer="content">{{SLIDE_TITLE}}</h1>
+
+      <!-- Add fixed-position slide elements here. Give each element a stable
+           data-ppt-id and a data-ppt-type from the HTML-PPT contract. -->
+
+      <div
+        class="source-footer"
+        data-ppt-type="text"
+        data-ppt-id="slide-01-source"
+        data-editable="true"
+        data-layer="footer">{{SOURCE_AND_SCOPE}}</div>
+    </section>
+  </main>
+</body>
+</html>

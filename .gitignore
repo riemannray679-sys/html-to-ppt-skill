@@ -1,0 +1,22 @@
+.DS_Store
+Thumbs.db
+
+# Local build / preview outputs
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Generated presentation outputs should usually be stored separately
+*.pptx
+*.pdf
+*.png
+*.jpg
+*.jpeg
+
+# Keep the reusable skill source clean
+node_modules/
+__pycache__/
+.venv/
+venv/
+
