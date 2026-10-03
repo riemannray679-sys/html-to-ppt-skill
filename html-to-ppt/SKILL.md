@@ -20,11 +20,14 @@ Do not omit meaningful visuals merely to maximize native editability. For slides
 
 When working in ChatGPT or Codex, load and follow the available Presentations skill before creating the PPTX. Use the platform's supported presentation-generation tools and render-and-verify workflow. If the current environment cannot create a real PPTX, state that limitation instead of presenting a screenshot as an editable deck.
 
+Apply [the default generation and Keynote compatibility rules](references/cross-platform-compatibility.md) to both outputs. Treat them as defaults only: an explicit user request, supplied template, brand guide, or source deck takes priority. The two-file contract remains a higher-priority specialization of this skill, with PPTX as the primary editable presentation and HTML as its coordinated companion.
+
 ## Load the bundled guidance
 
 - Read [references/design-system.md](references/design-system.md) before designing slides without a user-supplied template.
 - Read [references/content-visual-standard.md](references/content-visual-standard.md) before outlining or producing analytical slides.
 - Read [references/html-ppt-contract.md](references/html-ppt-contract.md) before implementing either deliverable.
+- Read [references/cross-platform-compatibility.md](references/cross-platform-compatibility.md) before choosing fonts, icons, images, charts, effects, or animation.
 - Use [assets/base-slide.html](assets/base-slide.html) as the HTML starting point when practical.
 - Read [references/universal-model-prompt.md](references/universal-model-prompt.md) when the user wants a portable prompt or a GitHub package for ChatGPT, GLM, Claude, Gemini, or another model.
 
