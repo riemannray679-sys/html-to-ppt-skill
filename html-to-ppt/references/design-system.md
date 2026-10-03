@@ -36,7 +36,7 @@ Do not repeat one archetype across an entire section. Match the composition to t
 | Soft evidence field | #F4F7FA |
 | Risk or warning accent | #E86F25 |
 
-Use navy for titles, conclusions, and key numbers. Use supporting blue for structure and navigation. Use orange only for genuine risks, warnings, or contrasts. Subtle blue gradients may be used inside mechanism illustrations or major headers when they improve depth, but keep the slide background pure white.
+Use navy for titles, conclusions, and key numbers. Use supporting blue for structure and navigation. Use orange only for genuine risks, warnings, or contrasts. Keep fills flat by default. Use a simple restrained gradient only when the user or a controlling template requires it and the PowerPoint-to-Keynote conversion risk is acceptable; keep the slide background pure white.
 
 ## Typography
 
@@ -44,21 +44,19 @@ Use font roles consistently rather than mixing fonts decoratively.
 
 | Content | Chinese | English and numbers |
 | --- | --- | --- |
-| Cover and slide titles | Microsoft YaHei Bold | Times New Roman Bold |
-| Section and module headings | Microsoft YaHei Semibold/Bold | Times New Roman Bold |
-| Body and tables | Microsoft YaHei | Times New Roman |
-| Direct quotations, epigraphs, definition-style excerpts | STKaiti or KaiTi | Times New Roman |
-| Notes, captions, source lines, methodology and scope statements | SimSun | Times New Roman |
+| Cover and slide titles | Microsoft YaHei Bold | Arial Bold |
+| Section and module headings | Microsoft YaHei Semibold/Bold | Arial Bold |
+| Body and tables | Microsoft YaHei | Arial |
+| Direct quotations and definition-style excerpts | Microsoft YaHei | Arial |
+| Notes, captions, source lines, methodology and scope statements | Microsoft YaHei | Arial |
 
-Use Song type for small factual apparatus because it remains formal and compact. Use Kai type for actual quoted or definition-like language, not as a general small-text font.
+Keep the complete deck to these two font families when practical. Differentiate quotations, notes, captions, sources, and methodology with weight, size, color, spacing, or rules rather than adding Kai, Song, icon, or decorative fonts. Only when the user explicitly limits the deck to their own Mac/Keynote use may the Chinese family switch to PingFang SC; keep Arial for English and numbers.
 
 HTML fallback stacks:
 
 ~~~css
---font-sans-zh: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", sans-serif;
---font-serif-zh: "SimSun", "Songti SC", "Noto Serif CJK SC", serif;
---font-kai-zh: "STKaiti", "KaiTi", "Kaiti SC", serif;
---font-latin: "Times New Roman", Times, serif;
+--font-zh: "Microsoft YaHei", Arial, sans-serif;
+--font-latin: Arial, sans-serif;
 ~~~
 
 Recommended PowerPoint ranges:
@@ -87,7 +85,9 @@ Avoid generic slogans, empty subtitles, marketing language, decorative badges, p
 
 - Keep tables, charts, timelines, simple process diagrams, comparison frameworks, annotations, and image labels native and editable.
 - Use SVG for icons when available.
+- Do not use font icons, Wingdings, or Font Awesome font dependencies.
 - Use images for equipment, photography, complex scientific illustrations, detailed exploded views, and visual explanations that native shapes cannot express efficiently.
+- Use high-resolution PNG or JPEG for raster assets and preserve their aspect ratios.
 - Keep every image independent from titles, labels, and data so it can be moved or replaced.
 - Mark technical illustrations as schematic when scale or construction is illustrative.
 - Prefer one large content-bearing image over several tiny decorative icons. Avoid image collages with no analytical purpose.

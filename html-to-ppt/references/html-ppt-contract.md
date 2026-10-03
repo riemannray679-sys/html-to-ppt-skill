@@ -93,6 +93,8 @@ Every image planned in the specification must be present in both deliverables. I
 - Keep images at sufficient resolution for their displayed size.
 - Preserve aspect ratios unless the approved design deliberately crops the asset.
 - Use SVG for simple icons and logos when available.
+- Do not use font icons, Wingdings, or Font Awesome font dependencies.
+- Use high-resolution PNG or JPEG for photographic and raster assets; do not upscale a visibly soft source.
 - In the HTML, embed small SVG and image assets or package them so the document works offline.
 - In the PPTX, keep each asset as a distinct object rather than baking it into a slide screenshot.
 - Keep labels, arrows, quantitative callouts, legends, and sources outside generated raster art so those elements remain editable.
@@ -110,13 +112,13 @@ Avoid features that do not map reliably to PowerPoint:
 - layout that depends on external scripts or network calls;
 - external web fonts that are not embedded and licensed.
 
-Use flat fills, borders, restrained shadows, simple rotations, and explicit geometry.
+Use flat fills, borders, explicit geometry, and simple rotations only where needed. Avoid SmartArt, WordArt, 3D effects, OLE objects, embedded Excel objects, complex gradients, heavy or complex shadows, complex path animation, Morph, and other Office-only effects by default. Use no animation by default; when animation is explicitly needed, prefer a simple Fade.
 
 ## Tables and charts
 
 Keep table data in structured cells. Use native PPT tables when row and column editing matters. Use grouped cell shapes when exact visual matching matters more than table operations, but keep every cell's text editable.
 
-Keep chart data in a structured dataset. Create a native PPT chart when the chart type is supported. If a specialized scientific plot must remain an image, keep its title, legend, callouts, and source text editable whenever practical, and disclose the non-editable plot.
+Keep chart data in a structured dataset. Prefer a two-dimensional, flat, consulting-report-like chart built with basic shapes, lines, and text or a simple native PPT chart when the chart type is supported. If a specialized scientific plot must remain an image, keep its title, legend, callouts, and source text editable whenever practical, and disclose the non-editable plot.
 
 ## Validation
 
