@@ -4,7 +4,7 @@
 
 核心目标：先用 HTML 承载高质量视觉排版，再从同一套页面规格生成同版式 PowerPoint，尽量保留文字、表格、图表、箭头、标签等可编辑元素，同时把复杂图片、设备图、科学示意图作为独立可移动/可替换的图片或 SVG 对象放入 PPT。
 
-默认风格是白底、深海军蓝 `#12355B`、高密度投研/投委会风格，中文字体优先使用微软雅黑；引用或注释可用楷体/宋体；英文和数字使用 Times New Roman。
+默认风格是白底、深海军蓝 `#12355B`、高密度投研/投委会风格。对外或跨平台使用时，中文默认微软雅黑，英文和数字默认 Arial，整套文件尽量不超过两种字体；只有明确限定为用户本人 Mac/Keynote 使用时，中文才切换为苹方，英文和数字仍使用 Arial。
 
 ## 适合什么场景
 
@@ -28,6 +28,7 @@
     │   └── icon.svg
     └── references/
         ├── content-visual-standard.md
+        ├── cross-platform-compatibility.md
         ├── design-system.md
         ├── html-ppt-contract.md
         └── universal-model-prompt.md
@@ -75,4 +76,4 @@ html-to-ppt/references/universal-model-prompt.md
 - PPT 的可编辑性和视觉还原度取决于执行环境是否真的能创建并渲染 `.pptx`。
 - 科学装置图、设备图、产品图等复杂视觉不建议强行拆成大量 PowerPoint 原生形状；更稳妥的做法是保留为独立图片/SVG，再用可编辑标签和箭头叠加。
 - 这个 skill 默认追求“视觉质量 + 关键内容可编辑”的混合方案，而不是 100% 原生形状还原。
-
+- 默认以 PowerPoint → Keynote 打开后的版式变化最小为目标，具体规则见 `html-to-ppt/references/cross-platform-compatibility.md`。
