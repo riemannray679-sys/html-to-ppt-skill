@@ -14,10 +14,8 @@
       --border: #C9D5E1;
       --field: #F4F7FA;
       --warning: #E86F25;
-      --font-sans-zh: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", sans-serif;
-      --font-serif-zh: "SimSun", "Songti SC", "Noto Serif CJK SC", serif;
-      --font-kai-zh: "STKaiti", "KaiTi", "Kaiti SC", serif;
-      --font-latin: "Times New Roman", Times, serif;
+      --font-zh: "Microsoft YaHei", Arial, sans-serif;
+      --font-latin: Arial, sans-serif;
     }
 
     * { box-sizing: border-box; }
@@ -27,7 +25,7 @@
       min-height: 100%;
       background: #DDE4EA;
       color: var(--ink);
-      font-family: var(--font-sans-zh);
+      font-family: var(--font-zh);
     }
 
     .deck {
@@ -67,7 +65,7 @@
       width: 1728px;
       min-height: 24px;
       color: var(--muted);
-      font-family: var(--font-serif-zh);
+      font-family: var(--font-zh);
       font-size: 18px;
       line-height: 1.3;
     }
@@ -85,8 +83,7 @@
     }
 
     .latin, .number { font-family: var(--font-latin); }
-    .quotation { font-family: var(--font-kai-zh); }
-    .annotation { font-family: var(--font-serif-zh); }
+    .quotation, .annotation { font-family: var(--font-zh); }
 
     @media print {
       html, body { background: #FFFFFF; }
